@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BA4A0FFA51E5A01D28C761A /* Pods_IGClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6BE164183B0F93CE71E6DB /* Pods_IGClone.framework */; };
 		D9589D4924C92C6100946250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9589D4824C92C6100946250 /* AppDelegate.swift */; };
 		D9589D4B24C92C6100946250 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9589D4A24C92C6100946250 /* SceneDelegate.swift */; };
 		D9589D4D24C92C6100946250 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9589D4C24C92C6100946250 /* ViewController.swift */; };
@@ -16,10 +17,13 @@
 		D9589D5F24C92EE900946250 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9589D5C24C92EE900946250 /* SettingsViewController.swift */; };
 		D9589D6024C92EE900946250 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9589D5D24C92EE900946250 /* UploadViewController.swift */; };
 		D9589D6124C92EE900946250 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9589D5E24C92EE900946250 /* FeedViewController.swift */; };
-		D9589D6324C9307C00946250 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9589D6224C9307C00946250 /* GoogleService-Info.plist */; };
+		D9589D6524C93DA400946250 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9589D6424C93DA400946250 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C93A6C1E0D76EED032ED341 /* Pods-IGClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGClone.release.xcconfig"; path = "Target Support Files/Pods-IGClone/Pods-IGClone.release.xcconfig"; sourceTree = "<group>"; };
+		5B6BE164183B0F93CE71E6DB /* Pods_IGClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E2C3765C0343094343FC164 /* Pods-IGClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGClone.debug.xcconfig"; path = "Target Support Files/Pods-IGClone/Pods-IGClone.debug.xcconfig"; sourceTree = "<group>"; };
 		D9589D4524C92C6100946250 /* IGClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9589D4824C92C6100946250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9589D4A24C92C6100946250 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +35,7 @@
 		D9589D5C24C92EE900946250 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D9589D5D24C92EE900946250 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		D9589D5E24C92EE900946250 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		D9589D6224C9307C00946250 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D9589D6424C93DA400946250 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA4A0FFA51E5A01D28C761A /* Pods_IGClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0576D7645777D61D7C2BB011 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C3765C0343094343FC164 /* Pods-IGClone.debug.xcconfig */,
+				1C93A6C1E0D76EED032ED341 /* Pods-IGClone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		34A2C6DD09A9607E44367D31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B6BE164183B0F93CE71E6DB /* Pods_IGClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D9589D3C24C92C6100946250 = {
 			isa = PBXGroup;
 			children = (
 				D9589D4724C92C6100946250 /* IGClone */,
 				D9589D4624C92C6100946250 /* Products */,
+				0576D7645777D61D7C2BB011 /* Pods */,
+				34A2C6DD09A9607E44367D31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,8 +98,8 @@
 				D9589D4E24C92C6100946250 /* Main.storyboard */,
 				D9589D5124C92C6600946250 /* Assets.xcassets */,
 				D9589D5324C92C6600946250 /* LaunchScreen.storyboard */,
+				D9589D6424C93DA400946250 /* GoogleService-Info.plist */,
 				D9589D5624C92C6600946250 /* Info.plist */,
-				D9589D6224C9307C00946250 /* GoogleService-Info.plist */,
 			);
 			path = IGClone;
 			sourceTree = "<group>";
@@ -86,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9589D5924C92C6600946250 /* Build configuration list for PBXNativeTarget "IGClone" */;
 			buildPhases = (
+				5521C7F61ED3E867D83B34F8 /* [CP] Check Pods Manifest.lock */,
 				D9589D4124C92C6100946250 /* Sources */,
 				D9589D4224C92C6100946250 /* Frameworks */,
 				D9589D4324C92C6100946250 /* Resources */,
+				7801CC470954270E4735DFDC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,13 +165,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9589D5524C92C6600946250 /* LaunchScreen.storyboard in Resources */,
-				D9589D6324C9307C00946250 /* GoogleService-Info.plist in Resources */,
 				D9589D5224C92C6600946250 /* Assets.xcassets in Resources */,
+				D9589D6524C93DA400946250 /* GoogleService-Info.plist in Resources */,
 				D9589D5024C92C6100946250 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5521C7F61ED3E867D83B34F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IGClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7801CC470954270E4735DFDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IGClone/Pods-IGClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IGClone/Pods-IGClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IGClone/Pods-IGClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D9589D4124C92C6100946250 /* Sources */ = {
@@ -298,6 +367,7 @@
 		};
 		D9589D5A24C92C6600946250 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E2C3765C0343094343FC164 /* Pods-IGClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +386,7 @@
 		};
 		D9589D5B24C92C6600946250 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C93A6C1E0D76EED032ED341 /* Pods-IGClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

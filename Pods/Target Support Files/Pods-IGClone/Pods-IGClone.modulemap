@@ -1,0 +1,6 @@
+framework module Pods_IGClone {
+  umbrella header "Pods-IGClone-umbrella.h"
+
+  export *
+  module * { export * }
+}
