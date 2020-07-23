@@ -13,6 +13,10 @@
 		D9589D5024C92C6100946250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9589D4E24C92C6100946250 /* Main.storyboard */; };
 		D9589D5224C92C6600946250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9589D5124C92C6600946250 /* Assets.xcassets */; };
 		D9589D5524C92C6600946250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9589D5324C92C6600946250 /* LaunchScreen.storyboard */; };
+		D9589D5F24C92EE900946250 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9589D5C24C92EE900946250 /* SettingsViewController.swift */; };
+		D9589D6024C92EE900946250 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9589D5D24C92EE900946250 /* UploadViewController.swift */; };
+		D9589D6124C92EE900946250 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9589D5E24C92EE900946250 /* FeedViewController.swift */; };
+		D9589D6324C9307C00946250 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9589D6224C9307C00946250 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		D9589D5124C92C6600946250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9589D5424C92C6600946250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9589D5624C92C6600946250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9589D5C24C92EE900946250 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D9589D5D24C92EE900946250 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		D9589D5E24C92EE900946250 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		D9589D6224C9307C00946250 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +67,14 @@
 				D9589D4824C92C6100946250 /* AppDelegate.swift */,
 				D9589D4A24C92C6100946250 /* SceneDelegate.swift */,
 				D9589D4C24C92C6100946250 /* ViewController.swift */,
+				D9589D5E24C92EE900946250 /* FeedViewController.swift */,
+				D9589D5C24C92EE900946250 /* SettingsViewController.swift */,
+				D9589D5D24C92EE900946250 /* UploadViewController.swift */,
 				D9589D4E24C92C6100946250 /* Main.storyboard */,
 				D9589D5124C92C6600946250 /* Assets.xcassets */,
 				D9589D5324C92C6600946250 /* LaunchScreen.storyboard */,
 				D9589D5624C92C6600946250 /* Info.plist */,
+				D9589D6224C9307C00946250 /* GoogleService-Info.plist */,
 			);
 			path = IGClone;
 			sourceTree = "<group>";
@@ -126,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9589D5524C92C6600946250 /* LaunchScreen.storyboard in Resources */,
+				D9589D6324C9307C00946250 /* GoogleService-Info.plist in Resources */,
 				D9589D5224C92C6600946250 /* Assets.xcassets in Resources */,
 				D9589D5024C92C6100946250 /* Main.storyboard in Resources */,
 			);
@@ -139,8 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9589D4D24C92C6100946250 /* ViewController.swift in Sources */,
+				D9589D6024C92EE900946250 /* UploadViewController.swift in Sources */,
 				D9589D4924C92C6100946250 /* AppDelegate.swift in Sources */,
 				D9589D4B24C92C6100946250 /* SceneDelegate.swift in Sources */,
+				D9589D6124C92EE900946250 /* FeedViewController.swift in Sources */,
+				D9589D5F24C92EE900946250 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
