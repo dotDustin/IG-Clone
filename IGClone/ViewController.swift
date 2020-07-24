@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
     // MARK: - Methods
@@ -33,7 +33,23 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func signInButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "toFeedVC", sender: nil)
+        guard emailTextField.text != "" else { signUpInErrorAlert(message: "email empty")
+            return
+        }
+        guard passwordTextField.text != "" else { signUpInErrorAlert(message: "password empty")
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authData, error) in
+            
+            if error != nil {
+                self.signUpInErrorAlert(message: error?.localizedDescription ?? "login fail")
+            } else {
+                self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+            }
+            
+        }
+        
     }
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
@@ -47,7 +63,6 @@ class ViewController: UIViewController {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authData, error) in
             
             if error != nil {
-                print("error")
                 self.signUpInErrorAlert(message: error?.localizedDescription ?? "database error")
             } else {
                 self.performSegue(withIdentifier: "toFeedVC", sender: nil)

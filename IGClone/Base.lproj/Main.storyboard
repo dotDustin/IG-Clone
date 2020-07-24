@@ -115,7 +115,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="Zfv-GJ-gC0"/>
+                                    <action selector="logoutButtonPressed:" destination="eqc-2S-7dL" eventType="touchUpInside" id="f20-zJ-TBb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,6 +127,9 @@
                         <viewLayoutGuide key="safeArea" id="2Ui-e9-g5d"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="s.circle.fill" catalog="system" id="tqZ-PN-EMR"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="PBQ-vj-n6Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgT-3n-jNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +154,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="h0s-do-Mnl">
             <objects>
-                <tabBarController id="yhu-KE-Vki" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" id="yhu-KE-Vki" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RAd-qp-wa7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
