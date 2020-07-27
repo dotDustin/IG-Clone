@@ -82,21 +82,98 @@
             </objects>
             <point key="canvasLocation" x="-142.02898550724638" y="138.61607142857142"/>
         </scene>
-        <!--Upload-->
+        <!--Upload View Controller-->
         <scene sceneID="Gbc-Pu-3Gh">
             <objects>
                 <viewController id="E7n-KD-Z8q" customClass="UploadViewController" customModule="IGClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LBH-8M-avN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectImage" translatesAutoresizingMaskIntoConstraints="NO" id="XB4-m4-Tom">
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XB4-m4-Tom" secondAttribute="height" multiplier="1:1" id="rRr-yc-uJO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click above to select image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20J-mf-Dxw">
+                                <rect key="frame" x="102" y="527" width="210" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XB4-m4-Tom" firstAttribute="top" secondItem="WGA-lF-ICS" secondAttribute="top" id="NaJ-it-UwV"/>
+                            <constraint firstItem="XB4-m4-Tom" firstAttribute="leading" secondItem="WGA-lF-ICS" secondAttribute="leading" id="QCr-Vk-cv8"/>
+                            <constraint firstItem="XB4-m4-Tom" firstAttribute="trailing" secondItem="WGA-lF-ICS" secondAttribute="trailing" id="UGE-mf-Yc0"/>
+                            <constraint firstItem="20J-mf-Dxw" firstAttribute="top" secondItem="XB4-m4-Tom" secondAttribute="bottom" constant="25" id="nbr-Ar-bVN"/>
+                            <constraint firstItem="20J-mf-Dxw" firstAttribute="centerX" secondItem="LBH-8M-avN" secondAttribute="centerX" id="qCk-67-Sdl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WGA-lF-ICS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="Ctc-tj-B0u"/>
+                    <navigationItem key="navigationItem" id="XaQ-Ye-2ZM">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="nZs-ON-TwH">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="E7n-KD-Z8q" id="BBT-IS-MFe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="XB4-m4-Tom" id="fUT-fT-JBG"/>
+                        <segue destination="YlR-KM-wv3" kind="show" identifier="toCaptionVC" id="2j5-iP-g98"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clw-gS-UYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2694" y="226"/>
+            <point key="canvasLocation" x="3602.898550724638" y="225.66964285714283"/>
+        </scene>
+        <!--Caption View Controller-->
+        <scene sceneID="usi-ev-3zr">
+            <objects>
+                <viewController id="YlR-KM-wv3" customClass="CaptionViewController" customModule="IGClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xrd-Ge-omn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KmL-bl-74Q">
+                                <rect key="frame" x="108" y="88" width="298" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bRS-PW-gEW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hSB-e6-S9R">
+                                <rect key="frame" x="0.0" y="88" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Saz-1L-GBM"/>
+                                    <constraint firstAttribute="height" constant="100" id="hSy-e3-AxT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KmL-bl-74Q" firstAttribute="top" secondItem="Y5s-20-fzp" secondAttribute="top" id="7Iq-rr-5W3"/>
+                            <constraint firstItem="hSB-e6-S9R" firstAttribute="top" secondItem="Y5s-20-fzp" secondAttribute="top" id="V8e-aw-vYE"/>
+                            <constraint firstItem="KmL-bl-74Q" firstAttribute="leading" secondItem="hSB-e6-S9R" secondAttribute="trailing" constant="8" id="aIP-fl-wOF"/>
+                            <constraint firstItem="hSB-e6-S9R" firstAttribute="leading" secondItem="Y5s-20-fzp" secondAttribute="leading" id="m39-0W-yok"/>
+                            <constraint firstItem="Y5s-20-fzp" firstAttribute="trailing" secondItem="KmL-bl-74Q" secondAttribute="trailing" constant="8" id="yvh-3t-PH5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y5s-20-fzp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DE1-Hf-kmd">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="4gy-ga-vsc"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="hSB-e6-S9R" id="Rgy-Dx-N5J"/>
+                        <outlet property="textField" destination="KmL-bl-74Q" id="lqr-cb-2Im"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nv7-p4-vLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4550.7246376811599" y="225.66964285714283"/>
         </scene>
         <!--Settings-->
         <scene sceneID="TDH-rT-w2k">
@@ -162,7 +239,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="htY-Py-Dug" kind="relationship" relationship="viewControllers" id="AdJ-Vq-32R"/>
-                        <segue destination="E7n-KD-Z8q" kind="relationship" relationship="viewControllers" id="W1M-AQ-oFI"/>
+                        <segue destination="FjB-42-Fig" kind="relationship" relationship="viewControllers" id="W1M-AQ-oFI"/>
                         <segue destination="eqc-2S-7dL" kind="relationship" relationship="viewControllers" id="CdG-dJ-9DH"/>
                     </connections>
                 </tabBarController>
@@ -170,8 +247,28 @@
             </objects>
             <point key="canvasLocation" x="1132" y="139"/>
         </scene>
+        <!--Upload-->
+        <scene sceneID="p9n-Tp-Ti2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FjB-42-Fig" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="Ctc-tj-B0u"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a9c-s4-1HM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="E7n-KD-Z8q" kind="relationship" relationship="rootViewController" id="cQN-Nc-q6e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OzN-5z-mlm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2692.753623188406" y="225.66964285714283"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="SelectImage" width="260" height="300"/>
         <image name="f.circle.fill" catalog="system" width="128" height="121"/>
         <image name="s.circle.fill" catalog="system" width="128" height="121"/>
         <image name="u.circle.fill" catalog="system" width="128" height="121"/>
