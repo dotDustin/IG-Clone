@@ -26,6 +26,15 @@ class CaptionViewController: UIViewController {
         
     }
     
+    // MARK:- Methods
+    func alertView(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK:- Actions
     @IBAction func sharebuttonPressed(_ sender: Any) {
         
         let storage = Storage.storage()
@@ -33,21 +42,37 @@ class CaptionViewController: UIViewController {
         
         let mediaFolder = storageRef.child("media")
         
-        if let data = imageView.image?.jpegData(compressionQuality: 0.2) {
-            let imageReference = mediaFolder.child("image.jpeg")
+        if let data = imageView.image?.jpegData(compressionQuality: 0.6) {
+            let uuid = UUID().uuidString
+            let imageReference = mediaFolder.child("\(uuid).jpg")
             imageReference.putData(data, metadata: nil) { (metadata, error) in
                 if error != nil {
-                    print(error?.localizedDescription)
+                    self.alertView(title: "Error", message: error?.localizedDescription ?? "Upload Error")
+                    
                 } else {
                     imageReference.downloadURL { (url, error) in
                         if error == nil {
                             let imageUrl = url?.absoluteString
-                            print(imageUrl)
+                            
+                            // Firestore
+                            let firestoreDatabase = Firestore.firestore()
+                            var firestoreReference: DocumentReference? = nil
+                            let firestorePost = ["imageUrl" : imageUrl!, "postedBy" : Auth.auth().currentUser!.email, "postComment" : self.textField.text, "date" : "date", "likes" : 0] as [String : Any]
+                            
+                            firestoreReference = firestoreDatabase.collection("Posts").addDocument(data: firestorePost, completion: { (error) in
+                                if error != nil {
+                                    self.alertView(title: "Error", message: error?.localizedDescription ?? "database error")
+                                } else {
+                                    
+                                }
+                            })
+                            
                         }
                     }
                 }
             }
         }
+        // setup segue to feed
     }
     
 }

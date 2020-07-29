@@ -14,3 +14,4 @@ Download new GoogleService-Info.plist file and add to project.
 
 Under Firebase Authentication, enable email/password.
 
+Under Firebase Database, setup Firestore.
