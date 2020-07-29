@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CaptionViewController: UIViewController {
     
@@ -23,6 +24,30 @@ class CaptionViewController: UIViewController {
         
         imageView.image = selectedImage
         
+    }
+    
+    @IBAction func sharebuttonPressed(_ sender: Any) {
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        
+        let mediaFolder = storageRef.child("media")
+        
+        if let data = imageView.image?.jpegData(compressionQuality: 0.2) {
+            let imageReference = mediaFolder.child("image.jpeg")
+            imageReference.putData(data, metadata: nil) { (metadata, error) in
+                if error != nil {
+                    print(error?.localizedDescription)
+                } else {
+                    imageReference.downloadURL { (url, error) in
+                        if error == nil {
+                            let imageUrl = url?.absoluteString
+                            print(imageUrl)
+                        }
+                    }
+                }
+            }
+        }
     }
     
 }

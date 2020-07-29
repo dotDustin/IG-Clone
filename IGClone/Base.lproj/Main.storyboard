@@ -164,7 +164,11 @@
                         <viewLayoutGuide key="safeArea" id="Y5s-20-fzp"/>
                     </view>
                     <navigationItem key="navigationItem" id="DE1-Hf-kmd">
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="4gy-ga-vsc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="4gy-ga-vsc">
+                            <connections>
+                                <action selector="sharebuttonPressed:" destination="YlR-KM-wv3" id="zoq-bV-eAo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="hSB-e6-S9R" id="Rgy-Dx-N5J"/>
