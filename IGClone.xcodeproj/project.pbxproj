@@ -20,6 +20,7 @@
 		D95E7BED24CEA8F30056719D /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E7BEC24CEA8F30056719D /* ImageSelectViewController.swift */; };
 		D95E7BEF24CEB5B20056719D /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E7BEE24CEB5B20056719D /* CaptionViewController.swift */; };
 		D9B8E0F224CA84F100F95931 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9B8E0F124CA84F100F95931 /* GoogleService-Info.plist */; };
+		D9C423F624D27548007ECCF0 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C423F524D27548007ECCF0 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D95E7BEC24CEA8F30056719D /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		D95E7BEE24CEB5B20056719D /* CaptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
 		D9B8E0F124CA84F100F95931 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D9C423F524D27548007ECCF0 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				D9589D5324C92C6600946250 /* LaunchScreen.storyboard */,
 				D9B8E0F124CA84F100F95931 /* GoogleService-Info.plist */,
 				D9589D5624C92C6600946250 /* Info.plist */,
+				D9C423F524D27548007ECCF0 /* FeedCell.swift */,
 			);
 			path = IGClone;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				D9589D4B24C92C6100946250 /* SceneDelegate.swift in Sources */,
 				D9589D6124C92EE900946250 /* FeedViewController.swift in Sources */,
 				D9589D5F24C92EE900946250 /* SettingsViewController.swift in Sources */,
+				D9C423F624D27548007ECCF0 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

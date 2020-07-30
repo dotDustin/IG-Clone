@@ -57,13 +57,13 @@ class CaptionViewController: UIViewController {
                             // Firestore
                             let firestoreDatabase = Firestore.firestore()
                             var firestoreReference: DocumentReference? = nil
-                            let firestorePost = ["imageUrl" : imageUrl!, "postedBy" : Auth.auth().currentUser!.email, "postComment" : self.textField.text, "date" : "date", "likes" : 0] as [String : Any]
+                            let firestorePost = ["imageUrl" : imageUrl!, "postedBy" : Auth.auth().currentUser!.email, "postComment" : self.textField.text, "date" : FieldValue.serverTimestamp(), "likes" : 0] as [String : Any]
                             
                             firestoreReference = firestoreDatabase.collection("Posts").addDocument(data: firestorePost, completion: { (error) in
                                 if error != nil {
                                     self.alertView(title: "Error", message: error?.localizedDescription ?? "database error")
                                 } else {
-                                    
+                                    self.tabBarController?.selectedIndex = 0
                                 }
                             })
                             
@@ -72,7 +72,7 @@ class CaptionViewController: UIViewController {
                 }
             }
         }
-        // setup segue to feed
+        
     }
     
 }
