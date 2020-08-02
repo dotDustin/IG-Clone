@@ -55,9 +55,6 @@ class FeedCell: UITableViewCell {
                     likedByCurrentUser = false
                 }
                 
-                print(currentUser)
-                print(usersWhoLiked)
-                
                 if likedByCurrentUser == false {
                     
                     let likes = ["likes" : likeCount + 1] as [String : Any]

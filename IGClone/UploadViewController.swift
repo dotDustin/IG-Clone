@@ -14,6 +14,11 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var imageView: UIImageView!
     
     // MARK: - Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        imageView.image = UIImage(named: "SelectImage.png")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +62,15 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     // MARK:- Actions
     @IBAction func nextButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "toCaptionVC", sender: nil)
+        if imageView.image == UIImage(named: "SelectImage.png") {
+            //do nothing
+        } else {
+            performSegue(withIdentifier: "toCaptionVC", sender: nil)
+        }
+        
+    }
+    
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
     }
     
 }

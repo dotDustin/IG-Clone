@@ -173,9 +173,11 @@
                     <connections>
                         <outlet property="imageView" destination="hSB-e6-S9R" id="Rgy-Dx-N5J"/>
                         <outlet property="textField" destination="KmL-bl-74Q" id="lqr-cb-2Im"/>
+                        <segue destination="ZWU-hz-YXM" kind="unwind" identifier="unwindToUpload" unwindAction="unwind:" id="SVh-oy-CXy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nv7-p4-vLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZWU-hz-YXM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4550.7246376811599" y="225.66964285714283"/>
         </scene>

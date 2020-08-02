@@ -19,6 +19,12 @@ class CaptionViewController: UIViewController {
     var selectedImage: UIImage?
     
     // MARK: - Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        textField.text = nil
+        textField.placeholder = "Write a Caption"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,6 +69,7 @@ class CaptionViewController: UIViewController {
                                 if error != nil {
                                     self.alertView(title: "Error", message: error?.localizedDescription ?? "database error")
                                 } else {
+                                    self.performSegue(withIdentifier: "unwindToUpload", sender: self)
                                     self.tabBarController?.selectedIndex = 0
                                 }
                             })
