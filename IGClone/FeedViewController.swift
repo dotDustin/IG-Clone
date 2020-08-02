@@ -17,6 +17,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Constants and Variables
     
+    var documentIdArray = [String]()
     var postedByArray = [String]()
     var postCommentArray = [String]()
     var likesArray = [Int]()
@@ -32,12 +33,13 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - Methods
     func getData() {
         let firestoreDatabase = Firestore.firestore()
-        firestoreDatabase.collection("Posts").addSnapshotListener { (snapshot, error) in
+        firestoreDatabase.collection("Posts").order(by: "date", descending: true).addSnapshotListener { (snapshot, error) in
             if error != nil {
                 print(error?.localizedDescription)
             } else {
                 if snapshot?.isEmpty != true {
                     
+                    self.documentIdArray.removeAll(keepingCapacity: false)
                     self.postedByArray.removeAll(keepingCapacity: false)
                     self.postCommentArray.removeAll(keepingCapacity: false)
                     self.likesArray.removeAll(keepingCapacity: false)
@@ -45,8 +47,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     
                     for document in snapshot!.documents {
                         
-                        //let documentID = document.documentID
-                        //print(documentID)
+                        let documentId = document.documentID
+                        self.documentIdArray.append(documentId)
                         
                         if let postedBy = document.get("postedBy") as? String {
                             self.postedByArray.append(postedBy)
@@ -84,6 +86,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.postImageView.sd_setImage(with: URL(string: imageUrlArray[indexPath.row]))
         cell.postCommentLabel.text = postCommentArray[indexPath.row]
         cell.postLikesLabel.text = "\(likesArray[indexPath.row])"
+        cell.documentIdLabel.text = documentIdArray[indexPath.row]
         
         return cell
     }

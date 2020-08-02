@@ -273,6 +273,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMq-8j-AXd">
+                                                    <rect key="frame" x="352" y="7" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="X3f-Gl-XEd" firstAttribute="centerX" secondItem="5aN-ej-tUC" secondAttribute="centerX" id="2Ws-8Y-oAU"/>
@@ -281,17 +287,20 @@
                                                 <constraint firstItem="dAr-iP-ke4" firstAttribute="leading" secondItem="Ssh-mN-AoZ" secondAttribute="leading" id="6kK-aT-f2o"/>
                                                 <constraint firstItem="7kZ-cW-Hrq" firstAttribute="top" secondItem="5aN-ej-tUC" secondAttribute="topMargin" id="9va-ex-wNc"/>
                                                 <constraint firstItem="dAr-iP-ke4" firstAttribute="top" secondItem="X3f-Gl-XEd" secondAttribute="bottom" constant="8" id="AXB-ER-ZkR"/>
+                                                <constraint firstAttribute="trailing" secondItem="fMq-8j-AXd" secondAttribute="trailing" constant="20" id="EiS-J2-dl1"/>
                                                 <constraint firstItem="7kZ-cW-Hrq" firstAttribute="leading" secondItem="5aN-ej-tUC" secondAttribute="leadingMargin" constant="4" id="KKn-CJ-HgF"/>
                                                 <constraint firstAttribute="trailing" secondItem="X3f-Gl-XEd" secondAttribute="trailing" constant="-7" id="LTg-Aq-nlG"/>
                                                 <constraint firstItem="X3f-Gl-XEd" firstAttribute="top" secondItem="7kZ-cW-Hrq" secondAttribute="bottom" constant="4" id="QG9-jT-NWq"/>
                                                 <constraint firstItem="D8N-kX-DGX" firstAttribute="trailing" secondItem="5aN-ej-tUC" secondAttribute="trailingMargin" constant="8" id="QIP-dK-kPB"/>
                                                 <constraint firstItem="X3f-Gl-XEd" firstAttribute="leading" secondItem="5aN-ej-tUC" secondAttribute="leading" constant="-7" id="RAe-bB-D1m"/>
                                                 <constraint firstItem="Ssh-mN-AoZ" firstAttribute="top" secondItem="dAr-iP-ke4" secondAttribute="bottom" constant="8" id="bYU-Es-ZPX"/>
+                                                <constraint firstItem="fMq-8j-AXd" firstAttribute="top" secondItem="5aN-ej-tUC" secondAttribute="top" constant="7" id="dco-8d-DZK"/>
                                                 <constraint firstItem="dAr-iP-ke4" firstAttribute="leading" secondItem="5aN-ej-tUC" secondAttribute="leadingMargin" constant="4" id="quE-dP-GE1"/>
                                                 <constraint firstItem="D8N-kX-DGX" firstAttribute="centerY" secondItem="Ssh-mN-AoZ" secondAttribute="centerY" id="vYx-xP-2ff"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="documentIdLabel" destination="fMq-8j-AXd" id="daN-S1-NwG"/>
                                             <outlet property="postCommentLabel" destination="dAr-iP-ke4" id="MOl-m8-QNw"/>
                                             <outlet property="postImageView" destination="X3f-Gl-XEd" id="cWw-CA-hdY"/>
                                             <outlet property="postLikesLabel" destination="D8N-kX-DGX" id="b0u-pj-Si2"/>
