@@ -22,7 +22,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var likesArray = [Int]()
     var imageUrlArray = [String]()
     
-    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +37,14 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 print(error?.localizedDescription)
             } else {
                 if snapshot?.isEmpty != true {
+                    
+                    self.postedByArray.removeAll(keepingCapacity: false)
+                    self.postCommentArray.removeAll(keepingCapacity: false)
+                    self.likesArray.removeAll(keepingCapacity: false)
+                    self.imageUrlArray.removeAll(keepingCapacity: false)
+                    
                     for document in snapshot!.documents {
+                        
                         //let documentID = document.documentID
                         //print(documentID)
                         

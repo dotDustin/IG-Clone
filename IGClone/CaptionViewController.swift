@@ -42,7 +42,7 @@ class CaptionViewController: UIViewController {
         
         let mediaFolder = storageRef.child("media")
         
-        if let data = imageView.image?.jpegData(compressionQuality: 0.6) {
+        if let data = imageView.image?.jpegData(compressionQuality: 1.0) {
             let uuid = UUID().uuidString
             let imageReference = mediaFolder.child("\(uuid).jpg")
             imageReference.putData(data, metadata: nil) { (metadata, error) in
